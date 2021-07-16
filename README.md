@@ -1,6 +1,10 @@
 # mpservice
 
-A Clojure service that is deployed on Google Cloud Run
+An endpoint that returns details of Members of UK Parliament for a given UK postcode. Implemented in Clojure and deployed on Google Cloud Run
+
+## Usage
+
+`/?postcode=SW1A2AA`
 
 ## Instructions
 
@@ -24,3 +28,4 @@ Compile and generate a pom file: `lein do compile :all, pom`
 Build with Jib and upload image to Google Cloud: `mvn compile jib:build`
 
 Note: if you are running it for the first time you will need to run `gcloud auth configure-docker` before uploading image to Google Cloud
+
