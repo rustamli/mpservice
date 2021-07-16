@@ -26,8 +26,6 @@
      #{[:div.hero-banner :h1],
        [:div.contact-line :a]})
 
-;; (mp-image (fetch-mp-by-post-code "SE1 6EJ"))
-
 (defn mp-info [page]
   (map clojure.string/trim (map html/text (html/select page *mp-info-selector*))))
 
@@ -42,11 +40,6 @@
       :name (first (filter (fn[i] (clojure.string/includes? i "MP")) (get details 1)))
       :email (first (filter (fn[i] (clojure.string/includes? i "@")) (get details 1)))
       :phones (filter (fn[i] (clojure.string/starts-with? i "0")) (get details 1))}))
-
-;;   (str (first details) "," (clojure.string/join "," (distinct (get details 1)))))
-  
-;;   (html/attr-values (html/select (fetch-mp-by-post-code post-code) [:div.image-inner]) :style))
-;;   (map html/text (html/select (fetch-mp-by-post-code post-code) *mp-details-selector*)))
 
 
 (defn- handler
