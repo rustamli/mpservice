@@ -21,6 +21,6 @@ Do in one line as `export PORT=3030 && lein run`
 
 Compile and generate a pom file: `lein do compile :all, pom`
 
-Build with Jib and upload image to Google Cloud: `mvn compile jib:build `
+Build with Jib and upload image to Google Cloud: `mvn compile jib:build`
 
 Note: if you are running it for the first time you will need to run `gcloud auth configure-docker` before uploading image to Google Cloud
